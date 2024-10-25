@@ -7,7 +7,7 @@ public class Comic extends Book {
 	private final int ageOfMainCharacter;
 
 	public Comic(String Title, int ageOfMainCharacter) {
-		super();
+		super(Title);
 		this.Title = Title;
 		this.ageOfMainCharacter = ageOfMainCharacter;
 	}
