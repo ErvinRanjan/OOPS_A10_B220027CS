@@ -26,7 +26,7 @@ public class Comic extends Book {
 		
 	@Override
 	public String toString() {
-		return "Title : " + Title + "\nAge of main character: " + ageOfMainCharacter;
+		return "Comic: \nTitle : " + Title + "\nAge of main character: " + ageOfMainCharacter;
 	}
 
 	@Override

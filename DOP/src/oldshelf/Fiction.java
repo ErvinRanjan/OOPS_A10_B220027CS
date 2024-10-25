@@ -6,6 +6,7 @@ public class Fiction extends Book {
 	private static FictionType type;
 	public Fiction(String title) {
 		super(title);
+		this.name = title;
 	}
 	
 	public String getName() {
