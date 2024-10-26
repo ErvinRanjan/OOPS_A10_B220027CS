@@ -15,7 +15,7 @@ public class NewSelection {
 		} else if(o instanceof Fiction) {
 			return ((Fiction)o).name();
 		} else if(o instanceof TextBook) {
-			return ((TextBook)o).Subject();
+			return ((TextBook)o).subject();
 		}
 		return "";
 	}

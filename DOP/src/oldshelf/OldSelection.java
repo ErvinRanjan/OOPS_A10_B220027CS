@@ -16,7 +16,7 @@ public class OldSelection {
 		} else if(o instanceof Fiction) {
 			return ((Fiction)o).getName();
 		} 
-		return ((TextBook)o).getSubject();
+		return ((TextBook)o).subject();
 	}
 
 	public static void main(String[] args) {

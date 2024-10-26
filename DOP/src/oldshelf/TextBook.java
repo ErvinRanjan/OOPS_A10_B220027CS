@@ -1,6 +1,6 @@
 package oldshelf;
 
-public class TextBook extends Book {
+public final class TextBook extends Book {
 
 	private final String subject;
 	
@@ -9,13 +9,22 @@ public class TextBook extends Book {
 		this.subject = subject;
 	}
 
-	public String getSubject() {
+	public String subject() {
 		return subject;
 	}
 	
 	@Override
-	public String toString() {
-		return "TextBook : \nSubject: " + subject;
+	public final String toString() {
+		return "TextBook: Subject: " + subject;
 	}
-
+	
+	@Override
+	public final int hashCode() {
+		return subject.hashCode();
+	}
+	
+	@Override 
+	public final boolean equals(Object o) {
+		return this == o;
+	}
 }

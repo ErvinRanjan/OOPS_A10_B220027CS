@@ -1,2 +1,2 @@
 package newshelf;
-public record TextBook(String Subject) implements IBook {}
+public record TextBook(String subject) implements IBook {}
