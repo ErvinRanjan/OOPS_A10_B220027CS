@@ -1,5 +1,3 @@
 package newshelf;
 
-public interface IBook {
-
-}
+sealed public interface IBook permits Comic,Fiction,TextBook{}
