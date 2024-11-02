@@ -9,15 +9,36 @@ public class NewSelection {
 	 * returns if o is not a book, returns empty string, if Comic, returns title, of Fiction
 	 * returns name, and if TextBook, returns subject.
 	 */
+	// using basic instanceof operator
+//	public static String getAgeOrTitle(Object o) {
+//		if(o instanceof Comic) {
+//			return ((Comic)o).Title();
+//		} else if(o instanceof Fiction) {
+//			return ((Fiction)o).name();
+//		} else if(o instanceof TextBook) {
+//			return ((TextBook)o).subject();
+//		}
+//		return "";
+//	}
+	
+	//using type switches
+//	public static String getAgeOrTitle(Object o) {
+//		return switch(o) {
+//			case Comic c -> c.Title();
+//			case Fiction f -> f.name();
+//			case TextBook t -> t.subject();
+//			default -> "";
+//		};
+//	}
+	
+	//using type switches and record patterns
 	public static String getAgeOrTitle(Object o) {
-		if(o instanceof Comic) {
-			return ((Comic)o).Title();
-		} else if(o instanceof Fiction) {
-			return ((Fiction)o).name();
-		} else if(o instanceof TextBook) {
-			return ((TextBook)o).subject();
-		}
-		return "";
+		return switch(o) {
+			case Comic(var Title,var ageOfMainCharacter) -> Title;
+			case Fiction(var name) -> name;
+			case TextBook(var subject) -> subject;
+			default -> "";
+		};
 	}
 
 	public static void main(String[] args) {
